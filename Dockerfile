@@ -42,8 +42,5 @@ ENV DEBIAN_FRONTEND=dialog
 # Set time zone
 ENV TZ=Asia/Shanghai
 
-# Install Oh-My-Zsh
-RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Set the default shell to zsh rather than sh
 ENV SHELL /bin/zsh

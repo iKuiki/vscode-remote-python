@@ -7,7 +7,7 @@
 相较于原本的Dockerfile，做了如下修改
 
 - 通过apt多安装了zsh less locales git-flow vim这5个组件
-- 安装了oh-my-zsh
+- ~~安装了oh-my-zsh~~ 基础镜像已经安装
 - 生成了中文locale支持，在终端中中文的输入与输出都不会乱码了
 - 时区设置为+0800
 - ENV Shell设置为zsh
