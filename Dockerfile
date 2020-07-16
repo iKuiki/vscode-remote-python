@@ -39,6 +39,13 @@ RUN apt-get update \
     && locale-gen
 ENV DEBIAN_FRONTEND=dialog
 
+# set apt repo to aliyun
+RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list
+RUN sed -i "s/security.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list
+
+# Add aliyun pip mirrors
+ADD pip.conf /etc/pip.conf
+
 # Set time zone
 ENV TZ=Asia/Shanghai
 
